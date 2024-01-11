@@ -1,0 +1,277 @@
+@import url(./reset.css);
+@import url(./media.css);
+
+@font-face {
+    font-family: 'EpilepsySansBold';
+    src: url(../fonts/EpilepsySansBold.ttf);
+}
+
+body {
+    background-color: #1c1c1c;
+
+    color: #fff;
+    font-family: 'EpilepsySansBold';
+}
+
+
+.container {
+    max-width: 1480px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+
+    font-size: 42px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.table {
+    border-collapse: collapse;
+    box-shadow: 1px 0px 12px 1px #161616;
+
+    margin-right: 20px;
+
+}
+
+.box {
+
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+    
+    text-align: center;
+}
+
+.box:hover {
+    background-color: #252525;
+}
+
+tr:nth-child(1) .box:nth-child(2) {
+    border-left: 4px solid #fff;
+    border-right: 4px solid #fff;
+}
+
+tr:nth-child(2) .box:nth-child(2) {
+    border-left: 4px solid #fff;
+    border-right: 4px solid #fff;
+}
+
+tr:nth-child(3) .box:nth-child(2) {
+    border-left: 4px solid #fff;
+    border-right: 4px solid #fff;
+}
+
+tr:nth-child(2) .box:nth-child(1) {
+    border-top: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+}
+
+tr:nth-child(2) .box:nth-child(2) {
+    border-top: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+}
+
+tr:nth-child(2) .box:nth-child(3) {
+    border-top: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+}
+
+
+.game-board {
+    display: flex;
+    flex-direction: row;
+
+    padding: 40px 0;
+}
+
+.restart-game {
+    position: relative;
+}
+
+.restart-btn {
+    width: 50px;
+    height: 50px;
+
+    cursor: pointer;
+
+}
+
+.animation-restart-btn {
+    animation: rotate 1s cubic-bezier(0, 0.87, 0.36, 1.1);
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+.change-mode {
+    position: relative;
+}
+
+.change-btn {
+
+    cursor: pointer;
+}
+
+.counter {
+    box-shadow: 1px 0px 12px 1px #161616;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.player-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 40px 0;
+}
+
+.turn-container {
+    height: 150px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.turn-container h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.turn-block {
+    display: flex;
+}
+
+.turn-bg {
+
+    background-color: #caaf00;
+
+    height: 48px;
+
+}
+
+.trash-btn {
+    cursor: pointer;
+
+}
+
+.turn-box {
+    position: relative;
+
+    border: 2px solid #fff;
+}
+
+.player-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.change-name_btn {
+    border: 2px solid #fff;
+    padding: 10px 5px;
+}
+
+
+@-webkit-keyframes pulsate {
+    50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; }
+   }
+   @keyframes pulsate {
+    50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; }
+   }
+   .turn-win {
+     color: rgb(245,245,245);
+     text-shadow: 0 -1px rgba(0,0,0,.1);
+     -webkit-animation: pulsate 1.2s linear infinite;
+     background-color: #caaf00;
+     animation: pulsate 1.2s linear infinite;
+   }
+   .winCombination {
+        color: rgb(245,245,245);
+        text-shadow: 0 -1px rgba(0,0,0,.1);
+        -webkit-animation: pulsate 1.2s linear infinite;
+        animation: pulsate 1.2s linear infinite;
+}
+
+.modal-bg {
+    display: none;
+
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: #2b2b2b;
+    opacity: 0.5;
+    z-index: 5;
+}
+
+.simple-modal {
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -150px;
+    width: 400px;
+    height: 300px;
+    z-index: 6;
+
+    background-color: #caaf00;
+    border-radius: 10px;
+
+    padding: 20px;
+}
+
+.modal-input {
+    padding: 10px;
+    box-shadow: 1px 0px 12px 1px #ad9601;
+
+    border-radius: 10px;
+    width: 100%;
+}
+
+.modal-input::placeholder {
+    color: #fff;
+}
+
+.modal-input:nth-child(1) {
+    margin-bottom: 30px;
+}
+
+.button-block {
+    margin-top: 20px;
+}
+
+.simpleButton {
+    font-size: 24px;
+}

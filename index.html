@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра в крестики-нолики</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <h1 class="title">Крестики-Нолики</h1>
+        </div>
+    </header>
+    
+    <main class="main">
+        
+        
+        <div class="wrapper container">
+
+            <div class="game-board">
+                <table class="table" id="table">
+                    <tbody>
+                        <tr>
+                            <td class="box">0</td>
+                            <td class="box">1</td>
+                            <td class="box">2</td>
+                        </tr>
+                        <tr>
+                            <td class="box">3</td>
+                            <td class="box">4</td>
+                            <td class="box">5</td>
+                        </tr>
+                        <tr>
+                            <td class="box">6</td>
+                            <td class="box">7</td>
+                            <td class="box">8</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="game-panel">
+                    <div class="restart-game">
+                        <img id="restart-btn" class="restart-btn" src="./images/restart.svg" alt="рестарт игры">
+                    </div>
+                    <div class="change-mode">
+                        <img class="change-btn" src="./images/twoPlayer.svg" alt="выбор режима игры">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="player-container">
+                <div class="counter player1">
+                    <p><span class="player1Name"></span></p>
+                    <p>(X)</p>
+                    <p>Счет - <span id="player1Score">0</span></p>
+                </div>
+
+                <div class="player-between">
+
+                    <div class="trash">
+                        <img id="trash-btn" class="trash-btn"  src="./images/trash.svg" alt="">
+                    </div>
+
+                    <div class="turn-container">
+                        <h3 id="whoTurn"></h3>
+                        <div class="turn-block">
+                            <div id="turnBox1" class="turn-box turn-bg">X</div>
+                            <div id="turnBox2" class="turn-box">O</div>
+                        </div>
+                    </div>
+                
+                    <div class="change-name">
+                        <button id="openDialog" class="change-name_btn">Установить имена</button>
+                    </div>
+                
+                </div>
+                
+                
+                <div class="counter player2">
+                    <p><span class="player2Name"></span></p>
+                    <p>(O)</p>
+                    <p>Счет - <span id="player2Score">0</span></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="modal-bg">
+        </div>
+        <div class="simple-modal">
+                <div class="input-block">
+                    <input class="modal-input" type="text" placeholder="Игрок 1" id="modalInput1Player">
+                    <input class="modal-input" type="text" placeholder="Игрок 2" id="modalInput2Player">
+                </div>
+
+                <div class="button-block">
+                    <button class="simpleButton" id="modalBtn">Выбрать</button>
+                </div>
+        </div>
+        
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

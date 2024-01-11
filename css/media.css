@@ -1,0 +1,173 @@
+/* Стили для экранов меньше 768px */
+@media screen and (max-width: 767px) {
+    .game-board {
+        margin: 0 auto;
+    }
+    .container {
+        padding: 0 40px;
+    }
+
+    .box {
+        font-size: 50px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .restart-game {
+        width: 25px;
+        height: 25px;
+
+        top: 18px
+    }
+
+    .change-btn {
+        width: 25px;
+        height: 25px;
+    }
+
+
+    .change-mode {
+        top: 80px;
+    }
+    
+    .counter {
+        width: 300px;
+        height: 50px;
+    } 
+    .player-container {
+        margin: 0 auto;
+    }
+
+    .change-name_btn {
+        width: 60px;   
+        font-size: 8px;
+    }
+
+    .turn-box {
+        padding: 15px 20px;
+        font-size: 12px;
+    }
+
+    .turn-container h3 {
+        font-size: 18px;
+    }
+}
+
+/* Стили для экранов от 768px до 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .game-board {
+        margin: 0 auto;
+    }
+
+    .box {
+        font-size: 120px;
+        width: 130px;
+        height: 130px;
+    }
+
+    .container {
+        padding: 0 40px;
+    }
+
+    .restart-game {
+        width: 50px;
+        height: 50px;
+
+        top: 40px
+    }
+
+    .change-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    .change-mode {
+        top: 120px;
+    }
+
+    .player-container {
+        margin: 0 auto;
+    }
+
+    .counter {
+        width: 700px;
+        height: 150px;
+
+        font-size: 32px;
+    }
+
+    .change-name_btn {
+        width: 120px;
+        font-size: 18px;
+    }
+
+    .turn-box {
+        padding: 15px 50px;
+        font-size: 15px;
+    }
+
+    .turn-container h3 {
+        font-size: 18px;
+    }
+}
+
+/* Стили для экранов больше 1024px */
+@media screen and (min-width: 1025px) {
+
+    .game-board {
+        margin: 0 auto;
+    }
+
+    .box {
+        font-size: 120px;
+        width: 160px;
+        height: 160px;
+    }
+    
+    .container {
+        padding: 0 80px;
+    }
+
+    .change-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .restart-game {
+        top: 55px;
+    }
+
+    .change-mode {
+        top: 160px;
+    }
+
+    .player-container {
+        margin: 0 auto;
+    }
+
+    .counter {
+        width: 700px;
+        height: 150px;
+
+        font-size: 32px;
+    }
+
+    .change-name_btn {
+        width: 120px;   
+        font-size: 18px;
+    }
+
+    .turn-box {
+        padding: 10px 50px;
+    }
+
+    .turn-container h3 {
+        font-size: 34px;
+    }
+
+    .turn-box {
+        font-size: 24px;
+    }
+}
